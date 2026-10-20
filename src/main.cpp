@@ -58,7 +58,7 @@ namespace buf {
 }
 
 class $modify(BufferGJBL, GJBaseGameLayer) {
-    void processCommands(float dt) {
+       void processCommands(float dt, bool isHalfTick, bool isLastTick) {
         if (buf::enabled() && PlayLayer::get() && m_player1) {
             float x = m_player1->getPositionX();
 
@@ -96,7 +96,7 @@ class $modify(BufferGJBL, GJBaseGameLayer) {
                 }
             }
         }
-        GJBaseGameLayer::processCommands(dt);
+        GJBaseGameLayer::processCommands(dt, isHalfTick, isLastTick);
     }
 
     void handleButton(bool down, int button, bool isPlayer1) {
