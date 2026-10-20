@@ -1,0 +1,35 @@
+{
+	"geode": "4.0.0",
+	"gd": {
+		"win": "2.2074",
+		"android": "2.2074",
+		"mac": "2.2074",
+		"ios": "2.2074"
+	},
+	"id": "yourname.predictive-buffer",
+	"name": "Predictive Input Buffer",
+	"version": "v0.1.0",
+	"developer": "yourname",
+	"description": "Delays early clicks to the exact physics step of a known-good press.",
+	"settings": {
+		"enabled": {
+			"type": "bool",
+			"name": "Enabled",
+			"default": true
+		},
+		"learn": {
+			"type": "bool",
+			"name": "Learn new targets",
+			"description": "Record clicks that survived ~0.5s as known-good targets.",
+			"default": true
+		},
+		"max-early-steps": {
+			"type": "int",
+			"name": "Max early steps",
+			"description": "How many physics steps early a click can be and still get snapped.",
+			"default": 4,
+			"min": 1,
+			"max": 12
+		}
+	}
+}
